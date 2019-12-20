@@ -1,7 +1,8 @@
 import React from 'react';
 import qs from 'qs'; // location.search parsing하는 라이브러리
 
-function About({ location }) {
+function About({ location }) { // query를 받아오는 parameter
+  console.log(location);
   const query = qs.parse(location.search, { // location.search는 ? 가 포함되어있는 문자열
     ignoreQueryPrefix: true, // query ? 제거하기
   });
