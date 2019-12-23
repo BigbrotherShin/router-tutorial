@@ -7,26 +7,28 @@ const profileData = {
   },
   homer: {
     name: 'Simpson',
-    description: 'animation character'
-  }
-}
+    description: 'animation character',
+  },
+};
 
 function Profile({ match }) {
-  const { username } = match.params; // url parameter or query 읽어오기
+  // 파라미터를 받아올 땐 match 안에 들어있는 params 값을 참조
+  const { username } = match.params; 
+  // match 객체안에는 현재의 주소가 Route 컴포넌트에서 정한 규칙과 어떻게 일치하는지에 대한 정보가 들어있습니다.
   const profile = profileData[username];
 
   if (!profile) {
-    return <div>Cannot find user.</div>
+    return <div>Cannot find user.</div>;
   }
 
   return (
     <div>
-      <h3>{username} ({profile.name})</h3>
-      <p>
-        {profile.description}
-      </p>
+      <h3>
+        {username} ({profile.name})
+      </h3>
+      <p>{profile.description}</p>
     </div>
-  )
+  );
 }
 
 export default Profile;
