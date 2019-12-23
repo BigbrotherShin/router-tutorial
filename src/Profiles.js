@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, Route } from 'react-router-dom';
 import Profile from './Profile';
 import WithRouterSample from './WithRouterSample';
+import RouterHookSample from './RouterHookSample';
 
 // 서브 라우트는, 라우트 내부의 라우트를 만드는것을 의미합니다. 탭 or 태그 선택 시 활용 가능.
 // 이 작업은 그렇게 복잡하지 않습니다. 그냥 컴포넌트를 만들어서 그 안에 또 Route 컴포넌트를 렌더링하면 됩니다.
@@ -36,6 +37,7 @@ const Profiles = () => {
       {/* Profile 을 Profiles 에서 적용: path 규칙에는 /profiles/:username 이라고 넣어주면 ,
       username 에 해당하는 값을 파라미터로 넣어주어서 Profile 컴포넌트에서 match props 를 통하여 전달받을 수 있게 됨 */}
       <WithRouterSample />
+      <RouterHookSample />
     </div>
   );
 };
