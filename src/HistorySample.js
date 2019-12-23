@@ -5,7 +5,6 @@ import React, { useEffect } from 'react';
 //  뒤로가기, 특정 경로로 이동, 이탈 방지 등..
 
 function HistorySample({ history }) {
-  console.log(history);
   const goBack = () => {
     history.goBack();
   };
@@ -15,7 +14,7 @@ function HistorySample({ history }) {
   };
 
   useEffect(() => {
-    console.log(history);
+    console.log(history)
     const unblock = history.block('Are you sure to leave?');
     return () => {
       unblock();

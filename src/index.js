@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom'; // BrowserRouter 불러오기
 
+// App을 BrowserRouter로 감싸기
 ReactDOM.render(
   <BrowserRouter>
     <App />
