@@ -15,7 +15,7 @@ function HistorySample({ history }) {
 
   useEffect(() => {
     console.log(history)
-    const unblock = history.block('Are you sure to leave?');
+    const unblock = history.block('Are you sure to leave?'); // block: 페이지 이탈 방지
     return () => {
       unblock();
     };
